@@ -26,10 +26,9 @@ body {
   width: 100%;
 }
 .layout {
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 100%;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  width: 1200px;
+  margin: 0 auto;
 }
 * {
   box-sizing: border-box;
