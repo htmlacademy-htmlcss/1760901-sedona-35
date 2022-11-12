@@ -4,35 +4,37 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
 
   <body>
     <div class="layout">
       <header class="page-header">
-        <div class="logo">
-          <a class="logo__link" href="#"> </a>
+        <div class="logo">          
+          <img class="logo__link" src="images/logo-full.svg" width="140" height="70.5" alt="Барбершоп «Бородинский».">
         </div>
         <ul class="navigation">
           <li class="navigation__item">
             <a
               class="navigation__link navigation__link--active"
-              href="main.html"
+              href="#"
               >Главная</a
             >
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="about.html">О Седоне</a>
+            <a class="navigation__link" href="#">О Седоне</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="hotels.html">Гостиницы</a>
-          </li>
+            <a class="navigation__link" href="catalog.html">Гостиницы</a>
+          </li>                 
         </ul>
         <ul class="navigation navigation--user">
           <li class="navigation__item navigation__item--search"></li>
-          <li class="navigation__item navigation__item--heart"></li>
+          <li class="navigation__item navigation__item--heart"></li>        
         </ul>
         <a class="navigation__button button button--brown" href="#"
-          >Хочу сюда!</a
+          >
+          <span>Хочу сюда!</span></a
         >
       </header>
       <main class="page-main">
@@ -174,7 +176,11 @@
               Укажите предполагаемые даты поездки, <br>
               и мы покажем вам лучшие предложения гостиниц в Седоне
             </p>
-            <button class="search-hotels">Поиск гостиницы в Седоне</button>
+            <button class="search-hotels">
+            <span>
+              Поиск гостиницы в Седоне
+            </span>
+            </button>
           </div>
         </section>
         <section class="subscription">
@@ -199,10 +205,12 @@
                 id="newsletter-email"
                 required>
               <button
-                class="registration__button button button--blue"
+                class="registration__button button"
                 type="submit"
               >
+            <span>
                 Подписаться
+              <span>
               </button>
             </div>
           </form>
@@ -236,67 +244,79 @@
           <a class="contacts-phone" href="tel:+7(812)812-12-12"
             >+7 (812) 812-12-12</a
           >
-          <a href="https://htmlacademy.ru/">
+          <a class="page-footer__logo-wrapper" href="https://htmlacademy.ru/">
             <img
               class="page-footer__logo"
               src="images/Logo-1.svg"
               width="138"
               height="64"
-              alt="Логотип HTML Academy">
+              alt="Логотип HTML Academy"
+            />
           </a>
         </div>
       </footer>
-    </div>
-    <div class="layout-popup hidden"></div>
-    <div class="popup hidden">
-      <form
-        class="popup__form"
-        action="https://echo.htmlacademy.ru/"
-        method="post"
-      >
-        <button class="popup__form-button" type="button"></button>
-        <h2 class="popup__form-title">Поиск гостиницы в Седоне</h2>
-        <ul class="popup__form-list">
-          <li class="popup__form-item">
-            <label class="popup__form-label"
-              >Дата Заезда:
-              <input
-                class="popup__form-input"
-                type="text"
-                value="27 апреля 2020">
-            </label>
-            <span class="popup__form-sub-input popup__form-sub-input--red"
-              >Мы не можем отправить вас в прошлое.</span
-            >
-          </li>
-          <li class="popup__form-item">
-            <label class="popup__form-label"
-              >Дата Выезда:
-              <input
-                class="popup__form-input"
-                type="text"
-                value="1 сентября 2023">
-            </label>
-            <span class="popup__form-sub-input"
-              >На эти даты есть свободные номера. Пока есть.</span
-            >
-          </li>
-        </ul>
-        <div class="popup__form-counter counter">
-          <div class="counter__item">
-            <span class="counter__label">Взрослые: </span>
-            <div class="counter__input"></div>
-          </div>
-          <div class="counter__item">
-            <span class="counter__label">Дети:</span>
-            <div class="counter__info">i</div>
-            <div class="counter__input"></div>
-          </div>
-        </div>
-        <button class="popup__button-blue button button--blue" type="button">
-          Найти
+    </div>    
+    <div class="modal-container hidden">
+      <div class="modal modal-auth">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
         </button>
-      </form>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+            <div class="arrival-date-date">
+              <div class="field-group modal-form-date">
+                <label class="form-label" for="arrival-date">
+                  Дата Заезда:</label>
+                <input class="arrival-date-field field" type="text" id="arrival-date" name="arrival-date"
+                  value="27 апреля 2020">
+              </div>
+              <p class="arrival-date-lower"> Мы не можем отправить вас в прошлое.
+              </p>
+            </div>
+            <div class="departure-date-date">
+              <div class="field-group modal-form-date">
+                <label class="form-label-1" for="departure-date">
+                  Дата Выезда:</label>
+                <input class="departure-date-field field" type="text" id="departure-date" name="departure-date"
+                  value="1 сентября 2023">
+              </div>
+              <p class="departure-date-lower"> На эти даты есть свободные номера. Пока есть.
+              </p>
+            </div>
+            <div class="adults-date">
+              <label class="form-label-2" for="arrival-count">
+                Взрослые:</label>
+              <div class="arrival-count-wrapper">
+                <button class="button-minus" type="button"></button>
+                <input class="field-button" type="number" id="arrival-count" value="2" name="min-adults">
+                <button class="button-plus" type="button"></button>
+              </div>
+
+            </div>
+            <div class="adults-date">
+              <span class="form-label-2 form-label-icon">
+              <label class="form-label-2" for="arrival-count-2">
+                Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" fill="#fff"/></svg>
+
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+              </span>
+                <div class="arrival-count-wrapper">
+                <button class="button-minus" type="button"></button>
+                <input class="field-button" type="number" id="arrival-count-2" value="2" name="min-children">
+                <button class="button-plus" type="button"></button>
+              </div>
+            </div>
+            <button class="button modal-submit" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
     </div>
   </body>
 </html>

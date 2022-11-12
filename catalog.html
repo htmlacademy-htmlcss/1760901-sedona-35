@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Каталог</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <div class="layout">
       <header class="page-header">
         <div class="logo">
-          <a class="logo__link" href="#"> </a>
+          <img
+            class="logo__link"
+            src="images/logo-full.svg"
+            width="140"
+            height="70.5"
+            alt="Барбершоп «Бородинский»."
+          />
         </div>
         <ul class="navigation">
           <li class="navigation__item">
-            <a class="navigation__link" href="main.html">Главная</a>
+            <a class="navigation__link" href="index.html">Главная</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link" href="about.html">О Седоне</a>
+            <a class="navigation__link" href="#">О Седоне</a>
           </li>
           <li class="navigation__item">
-            <a
-              class="navigation__link navigation__link--active"
-              href="hotels.html"
+            <a class="navigation__link navigation__link--active" href="#"
               >Гостиницы</a
             >
           </li>
@@ -30,8 +34,8 @@
           <li class="navigation__item navigation__item--search"></li>
           <li class="navigation__item navigation__item--heart"></li>
         </ul>
-        <a class="navigation__button button button--brown" href="#"
-          >Хочу сюда!</a
+        <button type="button" class="navigation__button button button--brown"
+          ><a href="#">Хочу сюда!</a></button
         >
       </header>
       <main class="page-main-catalog">
@@ -60,7 +64,7 @@
                       type="checkbox"
                       id="pool"
                       name="pool"
-                    >Бассейн
+                    />Бассейн
                     <span class="input-checkbox__span-1"></span>
                   </label>
                 </li>
@@ -71,7 +75,7 @@
                       type="checkbox"
                       id="parking"
                       name="parking"
-                    >Парковка
+                    />Парковка
                     <span class="input-checkbox__span-1"></span>
                   </label>
                 </li>
@@ -82,7 +86,7 @@
                       type="checkbox"
                       id="wi-fi"
                       name="wi-fi"
-                    >Wi-Fi
+                    />Wi-Fi
                     <span class="input-checkbox__span-1"></span>
                   </label>
                 </li>
@@ -98,7 +102,7 @@
                       type="radio"
                       id="hotel"
                       name="product-group"
-                    >Гостиница
+                    />Гостиница
                     <span class="input-radio__span-1"></span>
                   </label>
                 </li>
@@ -110,7 +114,7 @@
                       type="radio"
                       id="motel"
                       name="product-group"
-                    >Мотель
+                    />Мотель
                     <span class="input-radio__span-1"></span>
                   </label>
                 </li>
@@ -121,7 +125,7 @@
                       type="radio"
                       id="apartments"
                       name="product-group"
-                    >Апартаменты
+                    />Апартаменты
                     <span class="input-radio__span-1"></span>
                   </label>
                 </li>
@@ -129,9 +133,13 @@
             </div>
             <div class="page-main-catalog__form-range form-range">
               <span class="form-range__title">Стоимость, ₽:</span>
-              <div class="form-range__input-wrapper">
-                <input class="form-range__input" type="number" value="0">
-                <input class="form-range__input" type="number" value="9000">
+              <div class="form-range__inputs-wrapper">
+                <div  class="form-range__input-wrapper">
+                <input class="form-range__input" type="number" value="0"/>
+              </div>
+              <div  class="form-range__input-wrapper form-range__input-wrapper--second">
+                <input class="form-range__input form-range__input--second" type="number" value="9000" />
+              </div>
                 <input
                   class="form-range__input--range"
                   type="range"
@@ -140,20 +148,20 @@
                   min="0"
                   max="10000"
                   value="7780"
-                >
+                />
               </div>
               <div class="form-range__buttons-wrapper">
                 <button
                   class="form-range__button button form-range__button--blue"
                   type="submit"
                 >
-                  ПРИМЕНИТЬ
+                  <span> ПРИМЕНИТЬ </span>
                 </button>
                 <button
                   class="form-range__button button form-range__button--transparent"
                   type="button"
                 >
-                  СБРОСИТЬ
+                  <span> СБРОСИТЬ </span>
                 </button>
               </div>
             </div>
@@ -175,17 +183,17 @@
                 </option>
               </select>
               <ul class="filter-panel__list">
-                <li class="filter-panel__item filter-panel__item--focus">
+                <li class="filter-panel__item" tabindex="0">
                   <a class="filter-panel__link visually-hidden" href="#"
                     >Показать плиткой</a
                   >
                 </li>
-                <li class="filter-panel__item filter-panel__item--second">
+                <li class="filter-panel__item filter-panel__item--second" tabindex="0">
                   <a class="filter-panel__link visually-hidden" href="#"
                     >Показать карточками</a
                   >
                 </li>
-                <li class="filter-panel__item filter-panel__item--third">
+                <li class="filter-panel__item filter-panel__item--third" tabindex="0">
                   <a class="filter-panel__link visually-hidden" href="#"
                     >Показать списком</a
                   >
@@ -202,7 +210,7 @@
                   width="300"
                   height="212"
                   alt="вид звездного неба между гор"
-                >
+                />
                 <h3 class="product-card__title">Amara Resort & Spa</h3>
               </a>
               <div class="product-card__price">
@@ -210,15 +218,11 @@
                 <span class="product-card__price-text">От 4000 ₽</span>
               </div>
               <div class="product-card__buttons-wrapper">
-                <button
-                  class="product-card__button button button--brown"
-                  >
-                  ПОДРОБНЕЕ
+                <button class="product-card__button button button--brown">
+                  <span> ПОДРОБНЕЕ </span>
                 </button>
-                <button
-                  class="product-card__button button button--blue"
-                  >
-                  В ИЗБРАННОЕ
+                <button class="product-card__button button">
+                  <span> В ИЗБРАННОЕ </span>
                 </button>
               </div>
               <div class="product-card__rating-area rating-area">
@@ -231,7 +235,7 @@
                 <button
                   class="product-card__button product-card__button--text button button--gray"
                 >
-                  РЕЙТИНГ: 8,5
+                  <span> РЕЙТИНГ: 8,5 </span>
                 </button>
               </div>
             </li>
@@ -243,7 +247,7 @@
                   width="300"
                   height="212"
                   alt="радуга на фоне гор"
-                >
+                />
                 <h3 class="product-card__title">Villas at Poco Diablo</h3>
               </a>
               <div class="product-card__price">
@@ -251,15 +255,11 @@
                 <span class="product-card__price-text">От 5000 ₽</span>
               </div>
               <div class="product-card__buttons-wrapper">
-                <button
-                  class="product-card__button button button--brown"
-                  >
-                  ПОДРОБНЕЕ
+                <button class="product-card__button button button--brown">
+                  <span> ПОДРОБНЕЕ </span>
                 </button>
-                <button
-                  class="product-card__button button button--lightgreen"
-                  >
-                  В ИЗБРАННОМ
+                <button class="product-card__button button button--lightgreen">
+                  <span> В ИЗБРАННОМ </span>
                 </button>
               </div>
               <div class="product-card__rating-area rating-area">
@@ -272,7 +272,7 @@
                 <button
                   class="product-card__button product-card__button--text button button--gray"
                 >
-                  РЕЙТИНГ: 9,2
+                  <span> РЕЙТИНГ: 9,2 </span>
                 </button>
               </div>
             </li>
@@ -284,7 +284,7 @@
                   width="300"
                   height="212"
                   alt="горы и ясное небо"
-                >
+                />
 
                 <h3 class="product-card__title">Desert Quail Inn</h3>
               </a>
@@ -296,16 +296,12 @@
               </div>
 
               <div class="product-card__buttons-wrapper">
-                <button
-                  class="product-card__button button button--brown"
-                  >
-                  ПОДРОБНЕЕ
+                <button class="product-card__button button button--brown">
+                  <span> ПОДРОБНЕЕ </span>
                 </button>
 
-                <button
-                  class="product-card__button button button--blue"
-                  >
-                  В ИЗБРАННОЕ
+                <button class="product-card__button button">
+                  <span> В ИЗБРАННОЕ </span>
                 </button>
               </div>
 
@@ -321,7 +317,7 @@
                 <button
                   class="product-card__button product-card__button--text button button--gray"
                 >
-                  РЕЙТИНГ: 6,9
+                  <span> РЕЙТИНГ: 6,9 </span>
                 </button>
               </div>
             </li>
@@ -333,7 +329,7 @@
                   width="300"
                   height="212"
                   alt="горы в звездную ночь"
-                >
+                />
                 <h3 class="product-card__title">GreenTree Inn</h3>
               </a>
               <div class="product-card__price">
@@ -343,16 +339,12 @@
               </div>
 
               <div class="product-card__buttons-wrapper">
-                <button
-                  class="product-card__button button button--brown"
-                  >
-                  ПОДРОБНЕЕ
+                <button class="product-card__button button button--brown">
+                  <span> ПОДРОБНЕЕ </span>
                 </button>
 
-                <button
-                  class="product-card__button button button--blue"
-                  >
-                  В ИЗБРАННОЕ
+                <button class="product-card__button button">
+                  <span> В ИЗБРАННОЕ </span>
                 </button>
               </div>
 
@@ -366,7 +358,7 @@
                 <button
                   class="product-card__button product-card__button--text button button--gray"
                 >
-                  РЕЙТИНГ: 5,0
+                  <span> РЕЙТИНГ: 5,0 </span>
                 </button>
               </div>
             </li>
@@ -376,7 +368,7 @@
         <div class="pagination">
           <ul class="pagination__list">
             <li class="pagination__item pagination__item--active">
-              <a class="pagination__link">1</a>
+              <a class="pagination__link pagination__link--active">1</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link" href="#">2</a>
@@ -388,7 +380,7 @@
               <a class="pagination__link" href="#">4</a>
             </li>
             <li class="pagination__item pagination__item--dotes">
-              <a class="pagination__link"> ... </a>
+              <a class="pagination__link pagination__link--dotes"> ... </a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link" href="#">10</a>
@@ -398,7 +390,7 @@
         <section class="subscription subscription--no-image">
           <h2 class="subscription__title">Подпишитесь на рассылку</h2>
           <p class="subscription__title subscription__title--small">
-            Только полезная информация и никакого спама, <br>
+            Только полезная информация и никакого спама, <br />
             честное бойскаутское!
           </p>
           <form
@@ -416,12 +408,9 @@
                 name="newsletter-email"
                 id="newsletter-email"
                 required
-              >
-              <button
-                class="registration__button button button--blue"
-                type="submit"
-              >
-                Подписаться
+              />
+              <button class="registration__button button" type="submit">
+                <span> Подписаться </span>
               </button>
             </div>
           </form>
@@ -455,14 +444,14 @@
           <a class="contacts-phone" href="tel:+7(812)812-12-12"
             >+7 (812) 812-12-12</a
           >
-          <a href="https://htmlacademy.ru/">
+          <a class="page-footer__logo-wrapper" href="https://htmlacademy.ru/">
             <img
               class="page-footer__logo"
               src="images/Logo-1.svg"
               width="138"
               height="64"
               alt="Логотип HTML Academy"
-            >
+            />
           </a>
         </div>
       </footer>
