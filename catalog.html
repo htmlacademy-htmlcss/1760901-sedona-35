@@ -4,38 +4,41 @@
     <meta charset="utf-8">
     <title>Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico">
   </head>
   <body>
     <div class="layout">
       <header class="page-header">
-        <div class="logo">
-          <img
-            class="logo__link"
-            src="images/logo-full.svg"
-            width="140"
-            height="70"
-            alt="Барбершоп «Бородинский».">
-        </div>
-        <ul class="navigation">
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--active" href="#"
-              >Главная</a
-            >
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">О Седоне</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">Гостиницы</a>
-          </li>
-        </ul>
-        <ul class="navigation navigation--user">
-          <li class="navigation__item navigation__item--search"></li>
-          <li class="navigation__item navigation__item--heart"></li>
-        </ul>
-        <a class="navigation__button button button--brown" href="#">
-          <span>Хочу сюда!</span></a
-        >
+        <nav class="navigation-wrapper">
+          <div class="logo">
+            <img
+              class="logo__link"
+              src="images/logo-full.svg"
+              width="140"
+              height="70"
+              alt="Барбершоп «Бородинский».">
+          </div>        
+          <ul class="navigation">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--active" href="#"
+                >Главная</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">О Седоне</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="catalog.html">Гостиницы</a>
+            </li>
+          </ul>
+          <ul class="navigation navigation--user">
+            <li class="navigation__item navigation__item--search"></li>
+            <li class="navigation__item navigation__item--heart"></li>
+          </ul>
+          <a class="navigation__button button button--brown" href="#">
+            <span>Хочу сюда!</span></a
+          >
+        </nav>
       </header>
       <main class="page-main-catalog">
         <section class="page-main-catalog__form-wrapper">
