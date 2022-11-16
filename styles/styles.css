@@ -28,7 +28,10 @@ body {
   width: 1200px;
   margin: 0 auto;
 }
-* {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -333,6 +336,11 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
+}
+.navigation-wrapper {
+  display: flex;
+  width: 100%;
+  align-items: center;
 }
 .navigation {
   display: flex;
@@ -1432,8 +1440,7 @@ body {
   background-position-x: calc(100% - 20px);
   background-position-y: calc(100% - 17px);
 }
-.filter-panel__option {
-}
+
 .filter-panel__inner {
   display: flex;
   align-items: center;
